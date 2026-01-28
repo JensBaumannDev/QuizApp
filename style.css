@@ -23,11 +23,11 @@ body {
   padding-top: 12px;
 }
 
-.card {
-  padding: 16px;
+.quiz-answer-card:hover {
+  cursor: pointer;
+  background-color: aliceblue;
 }
 
-.quiz-answer-card:hover{
-cursor: pointer;
-background-color: aliceblue;
+.bg-success, .bg-danger{
+    color:white !important;
 }
