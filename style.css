@@ -22,3 +22,12 @@ body {
   align-items: center;
   padding-top: 12px;
 }
+
+.card {
+  padding: 16px;
+}
+
+.quiz-answer-card:hover{
+cursor: pointer;
+background-color: aliceblue;
+}
