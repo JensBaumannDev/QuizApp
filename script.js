@@ -94,14 +94,19 @@ function init() {
 }
 
 function showQuestions() {
-  let question = questions[currentQuestion];
+  if (currentQuestion >= questions.length) {
+    document.getElementById("endScreen").style = "";
+    document.getElementById("questionBody").style ="display:none;"
+  } else {
+    let question = questions[currentQuestion];
 
-  document.getElementById("question-number").innerHTML = currentQuestion + 1;
-  document.getElementById("questiontext").innerHTML = question["question"];
-  document.getElementById("answer_1").innerText = question["answer_1"];
-  document.getElementById("answer_2").innerText = question["answer_2"];
-  document.getElementById("answer_3").innerText = question["answer_3"];
-  document.getElementById("answer_4").innerText = question["answer_4"];
+    document.getElementById("question-number").innerHTML = currentQuestion + 1;
+    document.getElementById("questiontext").innerHTML = question["question"];
+    document.getElementById("answer_1").innerText = question["answer_1"];
+    document.getElementById("answer_2").innerText = question["answer_2"];
+    document.getElementById("answer_3").innerText = question["answer_3"];
+    document.getElementById("answer_4").innerText = question["answer_4"];
+  }
 }
 
 function answer(selection) {
