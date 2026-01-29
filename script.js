@@ -103,7 +103,7 @@ function showQuestions() {
   document.getElementById("answer_3").innerText = question["answer_3"];
   document.getElementById("answer_4").innerText = question["answer_4"];
 }
-Text;
+
 function answer(selection) {
   let question = questions[currentQuestion];
   let selectedQuestionNumber = selection.slice(-1);
