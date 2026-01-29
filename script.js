@@ -96,6 +96,7 @@ function init() {
 function showQuestions() {
   let question = questions[currentQuestion];
 
+  document.getElementById("question-number").innerHTML = currentQuestion + 1;
   document.getElementById("questiontext").innerHTML = question["question"];
   document.getElementById("answer_1").innerText = question["answer_1"];
   document.getElementById("answer_2").innerText = question["answer_2"];
