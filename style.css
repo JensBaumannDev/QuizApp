@@ -28,20 +28,26 @@ body {
   background-color: aliceblue;
 }
 
-.bg-success, .bg-danger{
-  color: white !Important;
+.bg-success,
+.bg-danger {
+  color: white !important;
 }
 
-.width-100{
+.width-100 {
   width: 100%;
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
 
-.final-headline{
+.final-headline {
   font-size: 38px;
   margin-bottom: 38px;
   margin-top: 12px;
+}
+
+.progress,
+.progress-bar {
+  border-radius: 0 !important;
 }

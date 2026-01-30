@@ -103,6 +103,12 @@ function showQuestions() {
     document.getElementById("amount-of-right-questions").innerHTML = rightQuestions;
     document.getElementById("hero-img").src = "./assets/trophy.png"
   } else {
+
+    let percent = (currentQuestion + 1) / questions.length;
+    percent = Math.round(percent * 100);
+    document.getElementById("progress-bar").innerHTML = `${percent}`
+    document.getElementById("progress-bar").style.width = `${percent}%`;
+
     let question = questions[currentQuestion];
 
     document.getElementById("question-number").innerHTML = currentQuestion + 1;
