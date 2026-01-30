@@ -30,12 +30,7 @@
 
     <div class="container">
       <div class="card quiz-card">
-        <img
-          src="./assets/cardhero.png"
-          id="hero-img"
-          class="card-img-top"
-          alt="Brain Logo"
-        />
+        <img src="./assets/cardhero.png" id="hero-img" class="card-img-top" alt="Bild einer verspielten Karte" />
         <div class="progress">
           <div
             class="progress-bar"
@@ -53,19 +48,15 @@
           <div class="text-center final-headline">Quiz beendet!</div>
 
           <div class="text-center">
-            Du hast <b id="amount-of-right-questions">xxx</b> Fragen von
-            <b id="amount-of-questions">xxx</b> richtig beantwortet.
+            Du hast
+            <b id="amount-of-right-questions">xxx</b>
+            Fragen von
+            <b id="amount-of-questions">xxx</b>
+            richtig beantwortet.
           </div>
-
-          <button
-            onclick="nextQuestion()"
-            type="button"
-            class="btn btn-primary"
-            id="next-button"
-            disabled
-          >
-            Nächste Frage
-          </button>
+          <div class="button-row">
+            <button onclick="restartGame()" class="btn btn-primary">Quiz Wiederholen</button>
+          </div>
         </div>
 
         <div class="card-body" id="questionBody">
@@ -89,16 +80,12 @@
 
           <div class="question-footer">
             <span>
-              <b id="question-number">1</b> von
-              <b id="all-questions">5</b> Fragen
+              <b id="question-number">1</b>
+              von
+              <b id="all-questions">5</b>
+              Fragen
             </span>
-            <button
-              onclick="nextQuestion()"
-              type="button"
-              class="btn btn-primary"
-              id="next-button"
-              disabled
-            >
+            <button onclick="nextQuestion()" type="button" class="btn btn-primary" id="next-button" disabled>
               Nächste Frage
             </button>
           </div>

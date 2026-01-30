@@ -16,8 +16,7 @@ const questions = [
     right_answer: 3,
   },
   {
-    question:
-      "Welche CSS-Eigenschaft wird verwendet, um die Hintergrundfarbe zu ändern?",
+    question: "Welche CSS-Eigenschaft wird verwendet, um die Hintergrundfarbe zu ändern?",
     answer_1: "color",
     answer_2: "background-color",
     answer_3: "bgcolor",
@@ -25,8 +24,7 @@ const questions = [
     right_answer: 2,
   },
   {
-    question:
-      "Wie deklariert man in modernem JavaScript (ES6) eine Variable, die nicht verändert werden soll?",
+    question: "Wie deklariert man in modernem JavaScript (ES6) eine Variable, die nicht verändert werden soll?",
     answer_1: "var",
     answer_2: "let",
     answer_3: "set",
@@ -42,8 +40,7 @@ const questions = [
     right_answer: 2,
   },
   {
-    question:
-      "Wie schreibt man 'Hallo Welt' in einem Alert-Fenster in JavaScript?",
+    question: "Wie schreibt man 'Hallo Welt' in einem Alert-Fenster in JavaScript?",
     answer_1: "msg('Hallo Welt');",
     answer_2: "console.log('Hallo Welt');",
     answer_3: "alert('Hallo Welt');",
@@ -75,8 +72,7 @@ const questions = [
     right_answer: 3,
   },
   {
-    question:
-      "Welche JavaScript-Methode wird verwendet, um ein Element über seine ID im DOM zu finden?",
+    question: "Welche JavaScript-Methode wird verwendet, um ein Element über seine ID im DOM zu finden?",
     answer_1: "document.getElementByClass()",
     answer_2: "document.queryID()",
     answer_3: "document.getElementById()",
@@ -100,8 +96,7 @@ function showQuestions() {
     document.getElementById("endScreen").style = "";
     document.getElementById("questionBody").style = "display:none;";
     document.getElementById("amount-of-questions").innerHTML = questions.length;
-    document.getElementById("amount-of-right-questions").innerHTML =
-      rightQuestions;
+    document.getElementById("amount-of-right-questions").innerHTML = rightQuestions;
     document.getElementById("hero-img").src = "./assets/trophy.png";
   } else {
     let percent = (currentQuestion + 1) / questions.length;
@@ -130,9 +125,7 @@ function answer(selection) {
     rightQuestions++;
   } else {
     document.getElementById(selection).parentNode.classList.add("bg-danger");
-    document
-      .getElementById(idOfRightAnswer)
-      .parentNode.classList.add("bg-success");
+    document.getElementById(idOfRightAnswer).parentNode.classList.add("bg-success");
   }
   document.getElementById("next-button").disabled = false;
 }
@@ -153,4 +146,14 @@ function resetAnswerButtons() {
   document.getElementById("answer_3").parentNode.classList.remove("bg-success");
   document.getElementById("answer_4").parentNode.classList.remove("bg-danger");
   document.getElementById("answer_4").parentNode.classList.remove("bg-success");
+}
+
+function restartGame() {
+  document.getElementById("hero-img").src = "./assets/cardhero.png";
+  document.getElementById("endScreen").style = "display:none;";
+  document.getElementById("questionBody").style = "";
+  rightQuestions = 0;
+  currentQuestion = 0;
+  resetAnswerButtons();
+  showQuestions();
 }
