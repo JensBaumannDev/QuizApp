@@ -1,4 +1,4 @@
-let questions = [
+const questions = [
   {
     question: "Was bedeutet die Abkürzung HTML?",
     answer_1: "HyperText Markup Language",
@@ -98,18 +98,18 @@ function init() {
 function showQuestions() {
   if (currentQuestion >= questions.length) {
     document.getElementById("endScreen").style = "";
-    document.getElementById("questionBody").style ="display:none;"
+    document.getElementById("questionBody").style = "display:none;";
     document.getElementById("amount-of-questions").innerHTML = questions.length;
-    document.getElementById("amount-of-right-questions").innerHTML = rightQuestions;
-    document.getElementById("hero-img").src = "./assets/trophy.png"
+    document.getElementById("amount-of-right-questions").innerHTML =
+      rightQuestions;
+    document.getElementById("hero-img").src = "./assets/trophy.png";
   } else {
-
     let percent = (currentQuestion + 1) / questions.length;
     percent = Math.round(percent * 100);
-    document.getElementById("progress-bar").innerHTML = `${percent}`
+    document.getElementById("progress-bar").innerHTML = `${percent}`;
     document.getElementById("progress-bar").style.width = `${percent}%`;
 
-    let question = questions[currentQuestion];
+    const question = questions[currentQuestion];
 
     document.getElementById("question-number").innerHTML = currentQuestion + 1;
     document.getElementById("questiontext").innerHTML = question["question"];
@@ -121,9 +121,9 @@ function showQuestions() {
 }
 
 function answer(selection) {
-  let question = questions[currentQuestion];
-  let selectedQuestionNumber = selection.slice(-1);
-  let idOfRightAnswer = `answer_${question["right_answer"]}`;
+  const question = questions[currentQuestion];
+  const selectedQuestionNumber = selection.slice(-1);
+  const idOfRightAnswer = `answer_${question["right_answer"]}`;
 
   if (selectedQuestionNumber == question["right_answer"]) {
     document.getElementById(selection).parentNode.classList.add("bg-success");
