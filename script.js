@@ -85,6 +85,8 @@ let questions = [
   },
 ];
 
+let rightQuestions = 0;
+
 let currentQuestion = 0;
 
 function init() {
@@ -97,6 +99,9 @@ function showQuestions() {
   if (currentQuestion >= questions.length) {
     document.getElementById("endScreen").style = "";
     document.getElementById("questionBody").style ="display:none;"
+    document.getElementById("amount-of-questions").innerHTML = questions.length;
+    document.getElementById("amount-of-right-questions").innerHTML = rightQuestions;
+    document.getElementById("hero-img").src = "./assets/trophy.png"
   } else {
     let question = questions[currentQuestion];
 
@@ -116,6 +121,7 @@ function answer(selection) {
 
   if (selectedQuestionNumber == question["right_answer"]) {
     document.getElementById(selection).parentNode.classList.add("bg-success");
+    rightQuestions++;
   } else {
     document.getElementById(selection).parentNode.classList.add("bg-danger");
     document
